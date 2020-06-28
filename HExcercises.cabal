@@ -1,0 +1,79 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 889730a99c0afd581ceee11401c038723b3fd56d063b9d60f05b432a66da27fc
+
+name:           HExcercises
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/annika/HExcercises#readme>
+homepage:       https://github.com/annika/HExcercises#readme
+bug-reports:    https://github.com/annika/HExcercises/issues
+author:         annika
+maintainer:     annika.rings@freenet.de
+copyright:      GPL
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/annika/HExcercises
+
+library
+  exposed-modules:
+      Chapter23
+      Fizzbuzz
+      Lib
+  other-modules:
+      Paths_HExcercises
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , comonad
+    , gloss
+    , hspec
+    , vector
+  default-language: Haskell2010
+
+executable HExcercises-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HExcercises
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HExcercises
+    , QuickCheck
+    , base >=4.7 && <5
+    , comonad
+    , gloss
+    , hspec
+    , vector
+  default-language: Haskell2010
+
+test-suite HExcercises-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HExcercises
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HExcercises
+    , QuickCheck
+    , base >=4.7 && <5
+    , comonad
+    , gloss
+    , hspec
+    , vector
+  default-language: Haskell2010

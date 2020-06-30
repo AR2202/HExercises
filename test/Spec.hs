@@ -30,15 +30,19 @@ main = hspec $
 
             describe "neighbours" $ do
               it "should not contain the element itself"
-                $property$
-                \(coord::Coord)->coord `notElem` (neighbours coord)
+                $property prop_neighbours_noSelf
+             
+              it "should be symmetric"
+                $property prop_neighbours_symmetric
 
-              describe "neigbours" $ do
-                it "should be symmetric"
-                  $property$
-                  \(coord::Coord)->forAll (choose (0, length (neighbours coord)-1)) $ \n -> coord `elem` ( neighbours $ (neighbours coord) !! n)
                 
             
 
 
+prop_neighbours_noSelf :: Coord -> Bool
+prop_neighbours_noSelf coord = coord `notElem` (neighbours coord)
 
+
+prop_neighbours_symmetric :: Coord -> Property
+prop_neighbours_symmetric coord = forAll (choose (0, length (neighbours coord)-1)) $ \n -> coord `elem` ( neighbours $ (neighbours coord) !! n)
+                

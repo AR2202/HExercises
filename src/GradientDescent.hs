@@ -7,7 +7,9 @@ solution,
 coordinateDescent
 )
 where
-
+--Homework problems 5 of Learning from Data
+--Problems can be found here
+--https://work.caltech.edu/homeworks.html
 errorfunc u v = (u * exp v - 2 * v* exp (-u))^2
 partialByU u v = 2*(exp v + 2*v * exp (-u))*(u * exp v -2*v*exp(-u))
 partialByV u v = 2 * (u* exp v - 2 * exp (-u)) * (u * exp v - 2 *v*exp(-u))

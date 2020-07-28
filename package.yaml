@@ -26,6 +26,8 @@ dependencies:
 - gloss
 - QuickCheck
 - hspec
+- mtl
+- random
 
 library:
   source-dirs: src

@@ -28,6 +28,8 @@ dependencies:
 - hspec
 - mtl
 - random
+- lens
+- lens-tutorial
 
 library:
   source-dirs: src

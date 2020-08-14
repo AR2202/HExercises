@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8a57e4d085c33337856a022556db4d9b43bc3db2cf54580ac038c93a920d48e2
+-- hash: fc70df355f131a5d08343307e6ea913898565698b6097a502a8d6e23eb97a7d1
 
 name:           HExcercises
 version:        0.1.0.0
@@ -30,6 +30,7 @@ library
       Chapter23
       Fizzbuzz
       GradientDescent
+      Lens1
       Lib
       LogisticRegression
   other-modules:
@@ -42,6 +43,8 @@ library
     , comonad
     , gloss
     , hspec
+    , lens
+    , lens-tutorial
     , mtl
     , random
     , vector
@@ -61,6 +64,8 @@ executable HExcercises-exe
     , comonad
     , gloss
     , hspec
+    , lens
+    , lens-tutorial
     , mtl
     , random
     , vector
@@ -81,6 +86,8 @@ test-suite HExcercises-test
     , comonad
     , gloss
     , hspec
+    , lens
+    , lens-tutorial
     , mtl
     , random
     , vector

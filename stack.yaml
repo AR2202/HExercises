@@ -34,10 +34,11 @@ packages:
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
 #
-# extra-deps:
+extra-deps:
 # - acme-missiles-0.3
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
+- lens-tutorial-1.0.4@sha256:325b59b7658f035d11386589c57d603ee27573f191ed8380dc2a890102bfe143,1199
 #
 # extra-deps: []
 

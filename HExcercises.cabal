@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fc70df355f131a5d08343307e6ea913898565698b6097a502a8d6e23eb97a7d1
+-- hash: b6c23610158602b2e50b0c0fed7f51935c78517316c5faf8cb0956f68a7718ea
 
 name:           HExcercises
 version:        0.1.0.0
@@ -27,12 +27,12 @@ source-repository head
 
 library
   exposed-modules:
+      Change
       Chapter23
       Fizzbuzz
-      GradientDescent
       Lens1
       Lib
-      LogisticRegression
+      TypeLevelFib
   other-modules:
       Paths_HExcercises
   hs-source-dirs:

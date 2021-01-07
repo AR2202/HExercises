@@ -69,14 +69,14 @@ checkNeighbours :: Store Coord Cell -> [Cell]
 checkNeighbours cells = experiment neighbours cells
 
 liveNeighbours :: Store Coord Cell -> Int
-liveNeighbours = length. (filter (== Alive)) .checkNeighbours
+liveNeighbours = length. filter (== Alive).checkNeighbours
 
 neighboursToCellState :: Store Coord Cell -> Cell
 neighboursToCellState cells
    |liveNs <  2 = Dead
    |liveNs >  3 = Dead
    |liveNs == 3 = Alive
-   |liveNs == 2 =  (if (cellState == Alive) then Alive else Dead)
+   |liveNs == 2 =  if cellState == Alive then Alive else Dead
    where  cellState = extract cells
           liveNs    = liveNeighbours cells
           

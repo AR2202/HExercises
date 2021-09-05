@@ -34,6 +34,7 @@ dependencies:
 - tasty-hunit
 - distributive
 - adjunctions
+- recursion-schemes
 
 library:
   source-dirs: src

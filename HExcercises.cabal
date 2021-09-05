@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7c1644e83ff3380bdb1ec7a9e7a90d42999fdc350abd5ca0e5d4130dad3d4c88
+-- hash: c390b0fc5bad93f2fb005637e059cd216d0aadecbfadf05b9eb685ea43ca594d
 
 name:           HExcercises
 version:        0.1.0.0
@@ -29,10 +29,12 @@ library
   exposed-modules:
       Change
       Chapter23
+      Chapter24
       Curry1
       Fizzbuzz
       Lens1
       Lib
+      StreamRep
       Typeclasses3
       TypeLevelExercise
       TypeLevelFib
@@ -43,14 +45,17 @@ library
       src
   build-depends:
       QuickCheck
+    , adjunctions
     , base >=4.7 && <5
     , comonad
+    , distributive
     , gloss
     , hspec
     , lens
     , lens-tutorial
     , mtl
     , random
+    , recursion-schemes
     , tasty
     , tasty-hunit
     , vector
@@ -66,14 +71,17 @@ executable HExcercises-exe
   build-depends:
       HExcercises
     , QuickCheck
+    , adjunctions
     , base >=4.7 && <5
     , comonad
+    , distributive
     , gloss
     , hspec
     , lens
     , lens-tutorial
     , mtl
     , random
+    , recursion-schemes
     , tasty
     , tasty-hunit
     , vector
@@ -90,14 +98,17 @@ test-suite HExcercises-test
   build-depends:
       HExcercises
     , QuickCheck
+    , adjunctions
     , base >=4.7 && <5
     , comonad
+    , distributive
     , gloss
     , hspec
     , lens
     , lens-tutorial
     , mtl
     , random
+    , recursion-schemes
     , tasty
     , tasty-hunit
     , vector

@@ -1,18 +1,17 @@
 module Curry1 where
 
 -- I AM NOT DONE
-
 {-
 - In Haskell, functions that take more than one argument are usually
   *curried*, meaning the function takes one argument and returns a new function
-  that takes the second argument. 
+  that takes the second argument.
 
 - This is also reflected in the type signature of multi-argument functions:
 
 f :: String -> Int -> Bool
 
-- In the above example, f is a function that takes a String and returns 
-  a function from Int to Bool. 
+- In the above example, f is a function that takes a String and returns
+  a function from Int to Bool.
 
 - In order to make this more explicit, we could write:
 
@@ -20,15 +19,15 @@ f ::  String -> (Int -> Bool)
 
 - However, as the function arrow associates to the right, the parentheses
   can be (and usually are) omitted.
-  
+
 1. The standard library defines a *higher order function* `curry`.
-  
-2. This functions takes a single input argument: a function 
+
+2. This functions takes a single input argument: a function
    that takes a pair (a, b) as input.
 
 3. The output of this function is a *new function* that takes its inputs separately
    (a -> b -> c), rather than as a tuple/pair.
-  
+
 curry :: ((a, b) -> c) -> a -> b -> c
 
    4. The inverse of `curry` is called `uncurry`.
@@ -39,35 +38,27 @@ curry :: ((a, b) -> c) -> a -> b -> c
 uncurry :: (a -> b -> c) -> (a, b) -> c
 
 -}
-
--- The manhattan distance of two coordinate points is defined as 
--- the distance in x + the distance in y. 
+-- The manhattan distance of two coordinate points is defined as
+-- the distance in x + the distance in y.
 -- This function takes the xdistance and ydistance and calculates the manhattan distance:
-
-
 manhattanDistance :: Int -> Int -> Int
 manhattanDistance xdist ydist = abs xdist + abs ydist
 
 -- TODO:
-
 -- Let's imagine that a pair, (Int, Int) represents a 2D point.
 -- Define a function that takes the 2D point and calculates its manhattan
 -- distance from the origin (0, 0).
 -- Use `uncurry` and the manhattanDistance defined above.
-
 manhattanDistancePoint :: (Int, Int) -> Int
 manhattanDistancePoint = uncurry manhattanDistance
 
--- This function takes a pair of booleans and returns a boolean 
+-- This function takes a pair of booleans and returns a boolean
 -- corresponding to their logical AND
-
 andPair :: (Bool, Bool) -> Bool
 andPair (b1, b2) = b1 && b2
 
 -- TODO:
-
 -- Give this function a type signature to make it compile
-
 andCurried :: Bool -> Bool -> Bool
 andCurried = curry andPair
 {-

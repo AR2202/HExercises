@@ -59,7 +59,7 @@ squares' :: [Int] -> Fix (StreamF Int)
 squares' = ana nextSquare
 --5.------------------------------------------
 era' :: (Int,[Int]) -> Maybe (Int, (Int,[Int]))
-era' (numprimes, p : ns) = if numprimes == 0  then Nothing else Just (p, (numprimes -1, filter (notdiv p) ns))
+era' (numprimes, p:ns) = if numprimes == 0  then Nothing else Just (p, (numprimes - 1, filter (notdiv p) ns))
     where notdiv p n = n `mod` p /= 0
 
 nPrimes :: Int -> [Int]

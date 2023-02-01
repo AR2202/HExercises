@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c390b0fc5bad93f2fb005637e059cd216d0aadecbfadf05b9eb685ea43ca594d
+-- hash: a33b381cb5369c8c184e6dc8d1f7775b9a0d5a8689bea27d9b1e6ab9f613dfa8
 
 name:           HExcercises
 version:        0.1.0.0
@@ -35,6 +35,7 @@ library
       Lens1
       Lib
       StreamRep
+      TestMemo
       Typeclasses3
       TypeLevelExercise
       TypeLevelFib
